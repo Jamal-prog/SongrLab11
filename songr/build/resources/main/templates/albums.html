@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Albums</title>
+</head>
+<body>
+<ul th:each = "album: ${albumList}">
+    <li>
+        <div th.text="$album.getTitle()}"></div>
+        <div th.text="$album.getArtist()}"></div>
+        <div th.text="$album.getSongCount()}"></div>
+        <div th.text="$album.getLength()}"></div>
+        <div th.src="$album.getImageUrl()}"></div>
+
+    </li>
+</ul>
+</body>
+</html>
